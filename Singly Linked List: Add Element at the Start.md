@@ -1,5 +1,6 @@
 # 📝 Singly Linked List: Add Element at the Start
-
+## NAME: Kshira K
+## Reg No: 212224040166
 This Python program demonstrates the implementation of a **Singly Linked List** where a new element can be added at the **start** of the list.
 
 ---
@@ -34,8 +35,41 @@ To write a Python program that adds a **new element** at the **start** of a sing
 ---
 
 ## Program
-Add Code Here
+```
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def push_front(self, newElement):
+        new_node = Node(newElement)
+        new_node.next = self.head
+        self.head = new_node
+
+    def PrintList(self):
+        if self.head is None:
+            print("The list is empty.")
+            return
+        current = self.head
+        while current:
+            print(current.data, end=" ")
+            current = current.next
+        print()
+
+
+MyList = LinkedList()
+MyList.push_front(10)
+MyList.push_front(20)
+MyList.push_front(30)
+
+MyList.PrintList()
+```
 ## Sample Output
+![image](https://github.com/user-attachments/assets/0f0750d2-16ce-4378-bc6f-518a38e99078)
 
 ## Result
-
+Therefore the given Python Program has been executed successfully and the output has been verified.
